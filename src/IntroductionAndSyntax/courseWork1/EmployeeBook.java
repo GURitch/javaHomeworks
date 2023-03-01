@@ -85,10 +85,10 @@ public class EmployeeBook {
     public Employee searchMaxSalaryByDepartment(int department) {
         Employee maxSalary = null;
         for (int i = 0; i < count; i++) {
-            if (employees[i].getDepartment() == department && maxSalary == null) {
-                maxSalary = employees[i];
-            } else if (employees[i].getDepartment() == department && employees[i].getSalary() > maxSalary.getSalary()){
-                maxSalary = employees[i];
+            if (employees[i].getDepartment() == department) {
+                if (maxSalary == null || employees[i].getSalary() < maxSalary.getSalary()) {
+                    maxSalary = employees[i];
+                }
             }
         }
         return maxSalary;
@@ -97,10 +97,10 @@ public class EmployeeBook {
     public Employee searchMinSalaryByDepartment(int department) {
         Employee minSalary = null;
         for (int i = 0; i < count; i++) {
-            if (employees[i].getDepartment() == department && minSalary == null) {
-                minSalary = employees[i];
-            } else if (employees[i].getDepartment() == department && employees[i].getSalary() < minSalary.getSalary()){
-                minSalary = employees[i];
+            if (employees[i].getDepartment() == department) {
+               if (minSalary == null || employees[i].getSalary() < minSalary.getSalary()) {
+                   minSalary = employees[i];
+               }
             }
         }
         return minSalary;
