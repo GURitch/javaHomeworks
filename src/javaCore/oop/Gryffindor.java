@@ -1,9 +1,9 @@
 package javaCore.oop;
 
 class Gryffindor extends Hogwarts {
-    private int nobility;
-    private int honor;
-    private int courage;
+    private final int nobility;
+    private final int honor;
+    private final int courage;
 
     public Gryffindor(String fullName, int powerOfMagic, int transgressionDistance, int nobility, int honor, int courage) {
         super(fullName, powerOfMagic, transgressionDistance);
@@ -24,6 +24,7 @@ class Gryffindor extends Hogwarts {
         return courage;
     }
 
+
     @Override
     public String toString() {
         return super.toString() +
@@ -31,6 +32,21 @@ class Gryffindor extends Hogwarts {
                 "Честь: " + honor + '\n' +
                 "Храбрость: " + courage + '\n'
                 ;
+    }
+
+    @Override
+    int getAttributesSum() {
+        return nobility + honor + courage;
+    }
+
+    void printCompareGryffindorStudents(Gryffindor student) {
+        if (getAttributesSum() > student.getAttributesSum()) {
+            System.out.println(getFullName() + " лучший Гриффиндорец, чем " + student.getFullName());
+        } else if (getAttributesSum() < student.getAttributesSum()) {
+            System.out.println(student.getFullName() + " лучший Гриффиндорец, чем " + getFullName());
+        } else {
+            System.out.println(getFullName() + " такой же Гриффиндорец, как " + student.getFullName());
+        }
     }
 
 }

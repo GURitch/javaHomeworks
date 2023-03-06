@@ -1,11 +1,12 @@
 package javaCore.oop;
 
 class Slytherin extends Hogwarts {
-    private int cunning;
-    private int determination;
-    private int ambition;
-    private int resourcefulness;
-    private int thirstForPower;
+    private final int cunning;
+    private final int determination;
+    private final int ambition;
+    private final int resourcefulness;
+    private final int thirstForPower;
+
 
     public Slytherin(String fullName, int powerOfMagic, int transgressionDistance, int cunning, int determination, int ambition, int resourcefulness, int thirstForPower) {
         super(fullName, powerOfMagic, transgressionDistance);
@@ -45,5 +46,20 @@ class Slytherin extends Hogwarts {
                 "Находчивость: " + resourcefulness + '\n' +
                 "Жажда власти: " + thirstForPower + '\n'
                 ;
+    }
+
+    @Override
+    int getAttributesSum() {
+        return cunning + determination + ambition + resourcefulness + thirstForPower;
+    }
+
+    void printCompareSlytherinStudents(Slytherin student) {
+        if (getAttributesSum() > student.getAttributesSum()) {
+            System.out.println(getFullName() + " лучший Слизеринец, чем " + student.getFullName());
+        } else if (getAttributesSum() < student.getAttributesSum()) {
+            System.out.println(student.getFullName() + " лучший Слизеринец, чем " + getFullName());
+        } else {
+            System.out.println(getFullName() + " такой же Слизеринец, как " + student.getFullName());
+        }
     }
 }

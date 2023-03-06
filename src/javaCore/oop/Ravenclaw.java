@@ -1,10 +1,10 @@
 package javaCore.oop;
 
 class Ravenclaw extends Hogwarts {
-    private int mind;
-    private int wisdom;
-    private int wit;
-    private int creation;
+    private final int mind;
+    private final int wisdom;
+    private final int wit;
+    private final int creation;
 
     public Ravenclaw(String fullName, int powerOfMagic, int transgressionDistance, int mind, int wisdom, int wit, int creation) {
         super(fullName, powerOfMagic, transgressionDistance);
@@ -30,6 +30,7 @@ class Ravenclaw extends Hogwarts {
         return creation;
     }
 
+
     @Override
     public String toString() {
         return super.toString() +
@@ -38,5 +39,20 @@ class Ravenclaw extends Hogwarts {
                 "Остроумие: " + wit + '\n' +
                 "Творчество: " + creation + '\n'
                 ;
+    }
+
+    @Override
+    int getAttributesSum() {
+        return mind + wisdom + wit + creation;
+    }
+
+    void printCompareRavenclawStudents(Ravenclaw student) {
+        if (getAttributesSum() > student.getAttributesSum()) {
+            System.out.println(getFullName() + " лучший Равенкловец, чем " + student.getFullName());
+        } else if (getAttributesSum() < student.getAttributesSum()) {
+            System.out.println(student.getFullName() + " лучший Равенкловец, чем " + getFullName());
+        } else {
+            System.out.println(getFullName() + " такой же Равенкловец, как " + student.getFullName());
+        }
     }
 }
