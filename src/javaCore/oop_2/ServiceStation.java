@@ -1,29 +1,40 @@
 package javaCore.oop_2;
 
-class ServiceStation{
+abstract class ServiceStation {
 
-//     public void check(Car car) {
-//         System.out.println("Обслуживаем " + car.getModelName());
-//         for (int i = 0; i < car.getWheelsCount(); i++) {
-//             car.updateTyre();
-//         }
-//         car.checkEngine();
-//     }
-//
-//    public void check(Truck truck) {
-//        System.out.println("Обслуживаем " + truck.getModelName());
-//        for (int i = 0; i < truck.getWheelsCount(); i++) {
-//            truck.updateTyre();
-//        }
-//        truck.checkEngine();
-//        truck.checkTrailer();
-//    }
-//
-//    public void check(Bicycle bicycle) {
-//        System.out.println("Обслуживаем " + bicycle.getModelName());
-//        for (int i = 0; i < bicycle.getWheelsCount(); i++) {
-//            bicycle.updateTyre();
-//        }
-//    }
+    private final String modelName;
+    private final int wheelsCount;
+
+    public ServiceStation(String modelName, int wheelsCount) {
+        this.modelName = modelName;
+        this.wheelsCount = wheelsCount;
+    }
+
+    public String getModelName() {
+        return modelName;
+    }
+
+    public int getWheelsCount() {
+        return wheelsCount;
+    }
+
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
+
+    public void checkEngine() {
+        System.out.println("Проверяем двигатель");
+    }
+
+    public void checkTrailer() {
+        System.out.println("Проверяем прицеп");
+    }
+
+    void check() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
+        }
+    }
 }
 
