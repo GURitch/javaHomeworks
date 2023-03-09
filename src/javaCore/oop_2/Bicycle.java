@@ -7,6 +7,9 @@ class Bicycle extends ServiceStation {
 
     @Override
     public void check() {
-        super.check();
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
         }
+    }
 }

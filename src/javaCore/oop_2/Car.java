@@ -5,8 +5,12 @@ package javaCore.oop_2;
      public Car(String modelName, int wheelsCount) {
          super(modelName, wheelsCount);
      }
+     @Override
      public void check() {
-         super.check();
+         System.out.println("Обслуживаем " + getModelName());
+         for (int i = 0; i < getWheelsCount(); i++) {
+             updateTyre();
+         }
          checkEngine();
      }
 }

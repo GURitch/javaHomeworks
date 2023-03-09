@@ -30,11 +30,6 @@ abstract class ServiceStation {
         System.out.println("Проверяем прицеп");
     }
 
-    void check() {
-        System.out.println("Обслуживаем " + getModelName());
-        for (int i = 0; i < getWheelsCount(); i++) {
-            updateTyre();
-        }
-    }
+    abstract void check();
 }
 
