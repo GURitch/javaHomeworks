@@ -1,5 +1,5 @@
 package javaCore.oop_2;
-class  Bicycle {
+class  Bicycle implements Service {
     private final String modelName;
     private final int wheelsCount;
 
@@ -19,5 +19,14 @@ class  Bicycle {
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
+
+    @Override
+    public void check() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
+        }
+    }
+
 
 }
