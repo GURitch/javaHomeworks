@@ -12,5 +12,4 @@ class ServiceStation {
     void check(Bicycle bicycle) {
         bicycle.check();
     }
-
 }

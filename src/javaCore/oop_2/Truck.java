@@ -30,4 +30,5 @@ class Truck implements Service {
         checkEngine();
         checkTrailer();
     }
+
 }
