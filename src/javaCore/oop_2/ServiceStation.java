@@ -1,7 +1,7 @@
 package javaCore.oop_2;
 
 class ServiceStation {
-    void check(Service trnsport) {
-        trnsport.check();
+    void check(Service transport) {
+        transport.check();
     }
 }

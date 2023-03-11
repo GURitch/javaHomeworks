@@ -1,16 +1,9 @@
 package javaCore.oop_2;
 
-public class Car implements Service {
-    private final String modelName;
-    private final int wheelsCount;
+public class Car extends Transport {
 
     public Car(String modelName, int wheelsCount) {
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
-    }
-
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+        super(modelName, wheelsCount);
     }
 
     public void checkEngine() {
@@ -19,10 +12,7 @@ public class Car implements Service {
 
     @Override
     public void check() {
-        System.out.println("Обслуживаем " + this.modelName);
-        for (int i = 0; i < this.wheelsCount; i++) {
-            updateTyre();
-        }
+        super.check();
         checkEngine();
     }
 
