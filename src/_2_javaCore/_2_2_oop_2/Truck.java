@@ -1,8 +1,8 @@
-package _2_javaCore._2_2_2_oop;
+package _2_javaCore._2_2_oop_2;
 
-class Car extends Transport {
+class Truck extends Transport{
 
-    public Car(String modelName, int wheelsCount) {
+    public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
 
@@ -10,10 +10,14 @@ class Car extends Transport {
         System.out.println("Проверяем двигатель");
     }
 
+    public void checkTrailer() {
+        System.out.println("Проверяем прицеп");
+    }
+
     @Override
     public void check() {
         super.check();
         checkEngine();
+        checkTrailer();
     }
-
 }

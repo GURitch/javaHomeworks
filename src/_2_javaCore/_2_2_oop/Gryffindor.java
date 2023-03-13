@@ -1,4 +1,4 @@
-package _2_javaCore._2_2_1_oop;
+package _2_javaCore._2_2_oop;
 
 class Gryffindor extends Hogwarts {
     private final int nobility;

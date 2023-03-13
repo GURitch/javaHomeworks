@@ -1,4 +1,4 @@
-package _2_javaCore._2_2_2_oop;
+package _2_javaCore._2_2_oop_2;
 
 abstract class Transport implements Service {
     private final String modelName;

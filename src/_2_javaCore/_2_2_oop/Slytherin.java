@@ -1,4 +1,4 @@
-package _2_javaCore._2_2_1_oop;
+package _2_javaCore._2_2_oop;
 
 class Slytherin extends Hogwarts {
     private final int cunning;
