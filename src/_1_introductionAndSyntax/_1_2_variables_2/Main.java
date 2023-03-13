@@ -1,4 +1,4 @@
-package _1_introductionAndSyntax._1_2_2_variables;
+package _1_introductionAndSyntax._1_2_variables_2;
 
 class Main {
     public static void main(String[] args) {

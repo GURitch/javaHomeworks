@@ -1,4 +1,4 @@
-package _1_introductionAndSyntax._1_3_1_conditionalOperator;
+package _1_introductionAndSyntax._1_3_conditionalOperator;
 
 class Main {
     public static void main(String[] args) {

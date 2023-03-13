@@ -1,4 +1,4 @@
-package _1_introductionAndSyntax._1_5_1_arrays;
+package _1_introductionAndSyntax._1_5_arrays;
 
 import java.util.Arrays;
 

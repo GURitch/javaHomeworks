@@ -1,4 +1,4 @@
-package _1_introductionAndSyntax._1_4_2_cycles;
+package _1_introductionAndSyntax._1_4_cycles_2;
 
 class Main {
     public static void main(String[] args) {
