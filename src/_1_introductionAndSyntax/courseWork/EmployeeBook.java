@@ -1,4 +1,4 @@
-package _1_introductionAndSyntax._1_10_courseWork;
+package _1_introductionAndSyntax.courseWork;
 
 class EmployeeBook {
     private final Employee[] employees;
