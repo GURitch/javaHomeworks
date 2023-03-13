@@ -1,4 +1,4 @@
-package IntroductionAndSyntax.methods;
+package introductionAndSyntax.methods;
 
 import java.time.LocalDate;
 

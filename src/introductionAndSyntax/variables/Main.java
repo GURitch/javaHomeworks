@@ -1,4 +1,4 @@
-package IntroductionAndSyntax.variables;
+package introductionAndSyntax.variables;
 
 class Main {
 

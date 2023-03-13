@@ -1,4 +1,4 @@
-package IntroductionAndSyntax.courseWork1;
+package introductionAndSyntax.courseWork1;
 
 import java.util.Objects;
 

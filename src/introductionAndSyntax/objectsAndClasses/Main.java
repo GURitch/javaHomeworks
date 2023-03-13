@@ -1,4 +1,4 @@
-package IntroductionAndSyntax.objectsAndClasses;
+package introductionAndSyntax.objectsAndClasses;
 
 
 public class Main {

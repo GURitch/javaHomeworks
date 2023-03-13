@@ -1,4 +1,4 @@
-package IntroductionAndSyntax.courseWork1;
+package introductionAndSyntax.courseWork1;
 
 public class Main {
     public static void main(String[] args) {
